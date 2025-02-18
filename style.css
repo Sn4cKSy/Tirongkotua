@@ -8,7 +8,7 @@ body {
 
     /* Animasi Gambar Latar Belakang */
     background-image: url('images/latar.png'); /* Ganti dengan path gambar Anda */
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     animation: moveBackground 20s infinite alternate;
