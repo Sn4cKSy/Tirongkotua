@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Section Judul -->
+    <section id="product-header">
+        <h1>Pengantaran Tiap Kamis</h1>
+        <p>Alamat Produk : Desa Tirongkotua</p>
+    </section>
+
+    <!-- Section Produk -->
+    <section id="products">
+        <div class="product">
+            <img src="images/Gula aren.jpg" alt="Gula Aren Bubuk">
+            <h2>Gula Aren Bubuk</h2>
+            <p>Rp 25.000 / pack</p>
+            <button onclick="scrollToOrderForm()">Pesan Sekarang</button>
+        </div>
+        <div class="product">
+            <img src="images/kripik pisang karamel.jpg" alt="Kripik Pisang Karamel">
+            <h2>Kripik Pisang Karamel</h2>
+            <p>Rp 7.000 / 100gr | Rp 17.500 / 250gr</p>
+            <button onclick="scrollToOrderForm()">Pesan Sekarang</button>
+        </div>
+        <div class="product">
+            <img src="images/pia mirah.jpg" alt="Pia Mirah">
+            <h2>Pia Mirah</h2>
+            <p>Aneka Rasa: Coklat, Keju, Kacang Ijo</p>
+            <button onclick="scrollToOrderForm()">Pesan Sekarang</button>
+        </div>
+    </section>
+
+    <!-- Section Formulir Pemesanan -->
+    <section id="orderFormSection">
+        <h2>Formulir Pemesanan</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label>Nama Pembeli:</label>
+                <input type="text" id="customerName" required>
+            </div>
+            <div id="productRows">
+                <!-- Baris produk pertama -->
+                <div class="product-row">
+                    <select class="product-select">
+                        <option value="">Pilih Produk</option>
+                        <option value="Gula Aren Bubuk">Gula Aren Bubuk (Rp25,000)</option>
+                        <option value="Kripik Pisang Karamel - 100gr">Kripik Pisang Karamel - 100gr (Rp7,000)</option>
+                        <option value="Kripik Pisang Karamel - 250gr">Kripik Pisang Karamel - 250gr (Rp17,500)</option>
+                        <option value="Pia Mirah - Coklat">Pia Mirah - Coklat (Rp20,000)</option>
+                        <option value="Pia Mirah - Keju">Pia Mirah - Keju (Rp20,000)</option>
+                        <option value="Pia Mirah - Kacang Ijo">Pia Mirah - Kacang Ijo (Rp20,000)</option>
+                    </select>
+                    <input type="number" class="quantity" min="1" placeholder="Jumlah">
+                </div>
+            </div>
+            <button type="button" id="addProduct">+ Tambah Produk</button>
+            <div class="total-section">
+                <h3>Total Harga: <span id="grandTotal">Rp0</span></h3>
+            </div>
+            <button type="button" onclick="submitOrder()">Pesan Sekarang</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
